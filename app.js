@@ -19,10 +19,10 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(bodyParser.json());
-console.log(process.env.MONGODB_URI);
+//console.log(process.env.MONGODB_URI);
 //var mongoDB = "mongodb://localhost:27017/employeemanagementsystemDB";
-var mongoDB = "mongodb+srv://test:Test1234@emscluster.eldvs.mongodb.net/employeemanagementsystemDB?retryWrites=true&w=majority";
-//var mongoDB = process.env.MONGODB_URI;
+//var mongoDB = "mongodb+srv://test:Test1234@emscluster.eldvs.mongodb.net/employeemanagementsystemDB?retryWrites=true&w=majority";
+var mongoDB = process.env.MONGODB_URI;
 // Connect to Mongoose and set connection variable
 //mongoose.connect(mongoDB, { useNewUrlParser: true});
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true});

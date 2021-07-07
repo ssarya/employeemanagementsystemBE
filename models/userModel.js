@@ -14,24 +14,30 @@ db.once("open", function() {
 });
 */
 const userSchema = mongoose.Schema({
-
-    emailId: {
-        type: String,
-        required: true
-    },
-    password: String,
-    division: String,
-    divisionId: Number,
-    userId: Number,
-    role: String,
-    roleType:String,
-    firstName: String,
-    lastName: String,
-    phnNum: String,
-    address: String,
-    dob: String,
-    doj: String
-
+    empFirstName:String,
+    empLastName:String,
+    empDOB:String,
+    empGender:String,
+    empEmail:String,
+    empMailingAdd:String,
+    empMailingAdd1:String,
+    empPhoneNo:String,
+    empEmgConct:String,
+    empDepartment:String,
+    empDepartmentDesc:String,
+    empRole:String,
+    empRoleDesc:String,
+    empRoleType:String,
+    empDOJ:String,
+    empType:String,
+    empTypeDesc:String,
+    empID:Number,
+    empPayrollType:String,
+    empPayrollTypeDesc:String,
+    empSalary:Number,
+    empSignInID:String,
+    password:String,
+    isProfileComplete:Boolean
 });
 //,resume:Buffer
 module.exports = mongoose.model('Users', userSchema);
